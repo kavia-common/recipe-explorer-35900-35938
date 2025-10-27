@@ -1,47 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './routes';
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
+import { AuthProvider } from './state/authContext';
+import { RecipesProvider } from './state/recipesContext';
+import { getStoredTheme, applyTheme } from './utils/theme';
 
 // PUBLIC_INTERFACE
 function App() {
-  const [theme, setTheme] = useState('light');
-
-  // Effect to apply theme to document element
+  // initialize theme on first render
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
-
-  // PUBLIC_INTERFACE
-  const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
-  };
+    const theme = getStoredTheme();
+    applyTheme(theme);
+  }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <button 
-          className="theme-toggle" 
-          onClick={toggleTheme}
-          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-        >
-          {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
-        </button>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          Current theme: <strong>{theme}</strong>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App app-surface">
+      <AuthProvider>
+        <RecipesProvider>
+          <BrowserRouter>
+            <Header />
+            <main className="app-main" role="main">
+              <AppRoutes />
+            </main>
+            <Footer />
+          </BrowserRouter>
+        </RecipesProvider>
+      </AuthProvider>
     </div>
   );
 }
