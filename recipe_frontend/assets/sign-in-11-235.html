@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In - 11:235</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Common design system variables (assumed to be present in assets/common.css if available) -->
+  <link rel="stylesheet" href="./sign-in-11-235.css">
+  <style>
+    :root {
+      /* Colors from design system */
+      --color-ffffff: #ffffff;
+      --color-292929: #292929;
+      --color-000000: #000000;
+      --color-e9fffa: #e9fffa;
+      --color-979797: #979797;
+      --color-fff2af: #fff2af;
+      --color-129575: #129575;
+      --color-dadada: #dadada;
+      --color-4cd964: #4cd964;
+      --color-121212: #121212;
+      --color-ff9c00: #ff9c00;
+      --color-ffc107: #ffc107;
+      --color-ff3d00: #ff3d00;
+      --color-4caf50: #4caf50;
+      --color-1976d2: #1976d2;
+      --color-035b81: #035b81;
+      --color-d9d9d9: #d9d9d9;
+      --color-484848: #484848;
+      --color-303030: #303030;
+      --color-a9a9a9: #a9a9a9;
+      --color-ffa61a: #ffa61a;
+      --color-ffce80: #ffce80;
+      --color-71b1a1: #71b1a1;
+      --color-130f26: #130f26;
+      --color-c1c1c1: #c1c1c1;
+      --color-ffe1b3: #ffe1b3;
+      --color-ffad30: #ffad30;
+      --color-dbebE7: #dbebe7;
+      --color-898989: #898989;
+      --color-292d32: #292d32;
+      --color-181818: #181818;
+      --color-c4c4c4: #c4c4c4;
+      --color-797979: #797979;
+      --color-808a96: #808a96;
+      --color-ceecd7: #ceecd7;
+      --color-31b057: #31b057;
+      --color-ffe1e7: #ffe1e7;
+      --color-fd3654: #fd3654;
+      --color-ffba4d: #ffba4d;
+      --color-d8d8d8: #d8d8d8;
+      --color-f6faf9: #f6faf9;
+      --color-afd3ca: #afd3ca;
+      --color-f4f4f4: #f4f4f4;
+      --color-9747ff: #9747ff;
+      --color-828282: #828282;
+
+      /* Typography variables used by this screen (subset of full system) */
+      --typo-58-family: 'Poppins', sans-serif;
+      --typo-58-size: 16px;
+      --typo-58-weight: 600;
+      --typo-58-line-height: 24px;
+      --typo-58-letter-spacing: 0;
+      --typo-58-text-align: center;
+      --typo-58-color: var(--color-ffffff);
+
+      --typo-60-family: 'Poppins', sans-serif;
+      --typo-60-size: 30px;
+      --typo-60-weight: 600;
+      --typo-60-line-height: 45px;
+      --typo-60-letter-spacing: 0;
+      --typo-60-text-align: left;
+      --typo-60-color: var(--color-000000);
+
+      --typo-61-family: 'Poppins', sans-serif;
+      --typo-61-size: 20px;
+      --typo-61-weight: 400;
+      --typo-61-line-height: 30px;
+      --typo-61-letter-spacing: 0;
+      --typo-61-text-align: left;
+      --typo-61-color: var(--color-121212);
+
+      --typo-62-family: 'Poppins', sans-serif;
+      --typo-62-size: 11px;
+      --typo-62-weight: 400;
+      --typo-62-line-height: 16.5px;
+      --typo-62-letter-spacing: 0;
+      --typo-62-text-align: center;
+      --typo-62-color: var(--color-ff9c00);
+
+      --typo-63-family: 'Poppins', sans-serif;
+      --typo-63-size: 11px;
+      --typo-63-weight: 500;
+      --typo-63-line-height: 16.5px;
+      --typo-63-letter-spacing: 0;
+      --typo-63-text-align: left;
+      --typo-63-color: var(--color-000000);
+
+      --typo-64-family: 'Poppins', sans-serif;
+      --typo-64-size: 11px;
+      --typo-64-weight: 500;
+      --typo-64-line-height: 16.5px;
+      --typo-64-letter-spacing: 0;
+      --typo-64-text-align: left;
+      --typo-64-color: var(--color-d9d9d9);
+
+      --typo-65-family: 'Poppins', sans-serif;
+      --typo-65-size: 11px;
+      --typo-65-weight: 400;
+      --typo-65-line-height: 16.5px;
+      --typo-65-letter-spacing: 0;
+      --typo-65-text-align: left;
+      --typo-65-color: var(--color-d9d9d9);
+
+      --typo-66-family: 'Poppins', sans-serif;
+      --typo-66-size: 14px;
+      --typo-66-weight: 400;
+      --typo-66-line-height: 21px;
+      --typo-66-letter-spacing: 0;
+      --typo-66-text-align: left;
+      --typo-66-color: var(--color-121212);
+
+      --typo-67-family: 'SF Pro Display', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --typo-67-size: 15px;
+      --typo-67-weight: 500;
+      --typo-67-line-height: 17.900390625px;
+      --typo-67-letter-spacing: -0.165px;
+      --typo-67-text-align: left;
+      --typo-67-color: var(--color-303030);
+
+      /* Style tokens used */
+      --radius-30: 30px;
+      --radius-10: 10px;
+      --radius-100: 100px;
+
+      /* Shadows mapped from styles */
+      --shadow-0: 0px 0px 5px 3px #696969;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--color-ffffff);
+    }
+  </style>
+</head>
+<body>
+  <!-- Screen container (root) -->
+  <main id="screen-sign-in-11-235" class="screen" role="main" aria-label="Sign In Screen">
+    <!-- Status Bar component -->
+    <div id="comp-13-71" class="comp status-bar" aria-hidden="true">
+      <div id="comp-13-71-128-302" class="symbols">
+        <div id="comp-13-71-128-303" class="battery">
+          <div id="comp-13-71-128-304" class="battery-rect"></div>
+          <img alt="Battery fill" src="figmaimages/figma_image_13_71_128_309.svg" class="battery-fill">
+        </div>
+        <div id="comp-13-71-128-310" class="cellular">
+          <img alt="Cell bar 1" src="figmaimages/figma_image_13_71_128_311.svg" class="cell-bar1">
+          <img alt="Cell bar 2" src="figmaimages/figma_image_13_71_128_312.svg" class="cell-bar2">
+          <img alt="Cell bar 3" src="figmaimages/figma_image_13_71_128_313.svg" class="cell-bar3">
+          <img alt="Cell bar 4" src="figmaimages/figma_image_13_71_128_314.svg" class="cell-bar4">
+        </div>
+        <div id="comp-13-71-128-315" class="wifi"></div>
+      </div>
+      <div id="comp-13-71-128-319" class="time-wrap">
+        <span id="comp-13-71-128-320" class="time-text">19:27</span>
+      </div>
+    </div>
+
+    <!-- Title group -->
+    <div id="group-13-110" class="group title">
+      <p id="text-12-29" class="text hello">Hello,</p>
+      <p id="text-12-30" class="text welcome">Welcome Back!</p>
+    </div>
+
+    <!-- Input Email -->
+    <div id="comp-30-585" class="comp input-field" data-role="input_area">
+      <div id="rect-I30-585-30-298" class="input-bg"></div>
+      <label id="label-I30-585-30-301" class="label">Email</label>
+      <span id="ph-I30-585-30-300" class="placeholder">Enter Email</span>
+    </div>
+
+    <!-- Input Password -->
+    <div id="comp-30-590" class="comp input-field" data-role="input_area">
+      <div id="rect-I30-590-30-298" class="input-bg"></div>
+      <label id="label-I30-590-30-301" class="label">Enter Password</label>
+      <span id="ph-I30-590-30-300" class="placeholder">Enter Password</span>
+    </div>
+
+    <!-- Forgot Password -->
+    <div id="group-12-91" class="group forgot">
+      <a id="text-12-94" class="link forgot-link" href="javascript:void(0)" aria-label="Forgot Password">Forgot Password?</a>
+    </div>
+
+    <!-- Or Sign in With line -->
+    <div id="group-12-139" class="group divider">
+      <div id="line-12-140" class="line-left"></div>
+      <p id="text-12-142" class="text or-with">Or Sign in With</p>
+      <div id="line-12-141" class="line-right"></div>
+    </div>
+
+    <!-- Social Button Google -->
+    <div id="button-13-35" class="button social">
+      <img id="rect-13-36" alt="Rectangle 642" src="figmaimages/figma_image_13_36.svg" class="social-bg">
+      <div id="comp-13-48" class="google-icon">
+        <img id="icon-13-39" alt="Google Vector" src="figmaimages/figma_image_13_39.svg" class="g-v1">
+        <img id="icon-13-42" alt="Google Vector" src="figmaimages/figma_image_13_42.svg" class="g-v2">
+      </div>
+    </div>
+
+    <!-- Social Button Facebook -->
+    <div id="button-13-49" class="button social">
+      <div id="rect-13-50" class="social-bg-noimg"></div>
+      <div id="group-13-58" class="facebook-icon">
+        <img id="icon-13-61" alt="Facebook Vector" src="figmaimages/figma_image_13_61.svg" class="fb-v">
+      </div>
+    </div>
+
+    <!-- CTA Big Button -->
+    <button id="button-54-668" class="button cta" type="button" aria-label="Sign In">
+      <span id="label-I54-668-53-624" class="cta-label">Sign In</span>
+      <img id="icon-I54-668-53-625" alt="Arrow Right Icon" src="figmaimages/figma_image_54_668_53_625.svg" class="cta-icon">
+    </button>
+
+    <!-- Bottom Home Indicator -->
+    <div id="comp-42-614" class="comp home-indicator" aria-hidden="true">
+      <div id="rect-I42-614-42-603" class="home-line"></div>
+    </div>
+
+    <!-- Bottom text -->
+    <p id="text-13-67" class="text signup">Don’t have an account? Sign up</p>
+  </main>
+
+  <script src="./sign-in-11-235.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

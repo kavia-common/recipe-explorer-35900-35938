@@ -1,0 +1,228 @@
+:root {
+  --screen-width: 375px;
+  --screen-height: 812px;
+
+  /* Shadows from design system used here */
+  --shadow-0: 0px 0px 5px 3px #696969;
+}
+
+/* Root screen frame (style_10) */
+.screen {
+  position: relative;
+  width: var(--screen-width);
+  height: var(--screen-height);
+  background-color: var(--color-ffffff); /* style_10 background */
+  border-radius: 30px; /* style_10 border_radius */
+  overflow: hidden;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Z-index layering according to order */
+.screen > * { position: absolute; }
+
+/* Status Bar (x:426,y:-430,w:375,h:44) relative to root (426,-430) -> 0,0 */
+#comp-13-71 {
+  left: 0px;
+  top: 0px;
+  width: 375px;
+  height: 44px;
+}
+#comp-13-71-128-302 {
+  position: absolute;
+  left: 293.5px; /* 719.5 - 426 */
+  top: 16.6px;   /* -413.4 - (-430) */
+  width: 68px;
+  height: 13px;
+}
+#comp-13-71-128-303 { position: absolute; left: 336px; top: 17.16px; width: 24.5px; height: 11.5px; }
+#comp-13-71-128-304 { position: absolute; left: 0px; top: 0px; width: 24.5px; height: 11.5px; background: rgba(48,48,48,0.4); border-radius: 0.5px; }
+#comp-13-71-128-309.battery-fill,
+#comp-13-71-128-309 {
+  position: absolute;
+  left: 2px; /* 764 - 762 */
+  top: 1.92px; /* -410.9233 - (-412.84) ≈ 1.9167 */
+  width: 18px;
+  height: 7.6667px;
+}
+#comp-13-71-128-310 { position: absolute; left: 293.5px; top: 17.6px; width: 17.09999px; height: 10.7px; }
+.cell-bar1 { position: absolute; left: 0px; top: 6.7px; width: 3px; height: 4px; }
+.cell-bar2 { position: absolute; left: 4.8px; top: 3.7px; width: 3px; height: 6px; }
+.cell-bar3 { position: absolute; left: 9.4px; top: 0px; width: 3px; height: 8.3px; }
+.cell-bar4 { position: absolute; left: 14.1px; top: -2.4px; width: 3px; height: 10.7px; }
+
+#comp-13-71-128-315 { position: absolute; left: 315.6px; top: 17.4px; width: 15.4px; height: 11.0572px; }
+
+#comp-13-71-128-319 { position: absolute; left: 0px; top: 12px; width: 180px; height: 22px; }
+#comp-13-71-128-320 {
+  position: absolute;
+  left: 29.5px; /* 455.5 - 426 */
+  top: 14px;    /* -416 - (-430) */
+  width: 37px; height: 18px;
+  font-family: var(--typo-67-family);
+  font-size: var(--typo-67-size);
+  font-weight: var(--typo-67-weight);
+  line-height: var(--typo-67-line-height);
+  letter-spacing: var(--typo-67-letter-spacing);
+  color: var(--typo-67-color);
+}
+
+/* Title group (x:456,y:-336) -> left:30, top:94 */
+#group-13-110 { left: 30px; top: 94px; width: 155px; height: 75px; }
+#text-12-29 {
+  position: absolute; left: 0px; top: 0px; width: 84px; height: 45px;
+  margin: 0;
+  font-family: var(--typo-60-family);
+  font-size: var(--typo-60-size);
+  font-weight: var(--typo-60-weight);
+  line-height: var(--typo-60-line-height);
+  color: var(--typo-60-color);
+}
+#text-12-30 {
+  position: absolute; left: 0px; top: 45px; width: 155px; height: 30px;
+  margin: 0;
+  font-family: var(--typo-61-family);
+  font-size: var(--typo-61-size);
+  font-weight: var(--typo-61-weight);
+  line-height: var(--typo-61-line-height);
+  color: var(--typo-61-color);
+}
+
+/* Input field 1 (Email) (x:456,y:-204,w:315,h:81) -> left:30, top:226 */
+#comp-30-585 { left: 30px; top: 226px; width: 315px; height: 81px; }
+#rect-I30-585-30-298 {
+  position: absolute; left: 0px; top: 26px; width: 315px; height: 55px;
+  background: var(--color-ffffff);
+  border: 1.5px solid var(--color-d9d9d9);
+  border-radius: 10px;
+}
+#label-I30-585-30-301 {
+  position: absolute; left: 0px; top: 0px; height: 21px;
+  font-family: var(--typo-66-family);
+  font-size: var(--typo-66-size);
+  font-weight: var(--typo-66-weight);
+  line-height: var(--typo-66-line-height);
+  color: var(--typo-66-color);
+}
+#ph-I30-585-30-300 {
+  position: absolute; left: 20px; top: 45px; height: 17px;
+  font-family: var(--typo-65-family);
+  font-size: var(--typo-65-size);
+  font-weight: var(--typo-65-weight);
+  line-height: var(--typo-65-line-height);
+  color: var(--typo-65-color);
+}
+
+/* Input field 2 (Password) (x:456,y:-93) -> left:30, top:337 */
+#comp-30-590 { left: 30px; top: 337px; width: 315px; height: 81px; }
+#rect-I30-590-30-298 {
+  position: absolute; left: 0px; top: 26px; width: 315px; height: 55px;
+  background: var(--color-ffffff);
+  border: 1.5px solid var(--color-d9d9d9);
+  border-radius: 10px;
+}
+#label-I30-590-30-301 {
+  position: absolute; left: 0px; top: 0px; height: 21px;
+  font-family: var(--typo-66-family);
+  font-size: var(--typo-66-size);
+  font-weight: var(--typo-66-weight);
+  line-height: var(--typo-66-line-height);
+  color: var(--typo-66-color);
+}
+#ph-I30-590-30-300 {
+  position: absolute; left: 20px; top: 45px; height: 17px;
+  font-family: var(--typo-65-family);
+  font-size: var(--typo-65-size);
+  font-weight: var(--typo-65-weight);
+  line-height: var(--typo-65-line-height);
+  color: var(--typo-65-color);
+}
+
+/* Forgot Password group (x:466,y:8) -> left:40, top:438 */
+#group-12-91 { left: 40px; top: 438px; width: 97px; height: 17px; }
+#text-12-94 {
+  position: absolute; left: 0px; top: 0px; width: 97px; height: 17px;
+  text-decoration: none;
+  font-family: var(--typo-62-family);
+  font-size: var(--typo-62-size);
+  font-weight: var(--typo-62-weight);
+  line-height: var(--typo-62-line-height);
+  color: var(--typo-62-color);
+}
+
+/* Divider "Or Sign in With" (x:516,y:130,w:195,h:17) -> left:90, top:560 */
+#group-12-139 { left: 90px; top: 560px; width: 195px; height: 17px; }
+#line-12-140 {
+  position: absolute; left: 145px; top: 9px; width: 50px; height: 1px; background: var(--color-d9d9d9);
+}
+#line-12-140::after { content: ""; }
+#line-12-141 {
+  position: absolute; left: 0px; top: 9px; width: 50px; height: 1px; background: var(--color-d9d9d9);
+}
+#text-12-142 {
+  position: absolute; left: 57px; top: 0px; width: 81px; height: 17px;
+  margin: 0;
+  font-family: var(--typo-64-family);
+  font-size: var(--typo-64-size);
+  font-weight: var(--typo-64-weight);
+  line-height: var(--typo-64-line-height);
+  color: var(--typo-64-color);
+  text-align: left;
+}
+
+/* Social button Google (x:557,y:167,w:44,h:44) -> left:131, top:597 */
+#button-13-35 { left: 131px; top: 597px; width: 44px; height: 44px; }
+.social-bg {
+  position: absolute; left: 0px; top: 0px; width: 44px; height: 44px; border-radius: 10px; box-shadow: var(--shadow-0);
+}
+.google-icon { position: absolute; left: 10px; top: 10px; width: 24px; height: 24px; }
+#g-v1, #icon-13-39 { position: absolute; left: 2px; top: 2px; width: 20px; height: 20px; }
+#g-v2, #icon-13-42 { position: absolute; left: 12px; top: 10px; width: 10px; height: 9.4141px; }
+
+/* Social button Facebook (x:626,y:167,w:44,h:44) -> left:200, top:597 */
+#button-13-49 { left: 200px; top: 597px; width: 44px; height: 44px; }
+.social-bg-noimg { position: absolute; left: 0px; top: 0px; width: 44px; height: 44px; background: var(--color-ffffff); border-radius: 10px; box-shadow: var(--shadow-0); }
+.facebook-icon { position: absolute; left: 10px; top: 10px; width: 24px; height: 24px; }
+.fb-v { position: absolute; left: 2px; top: 2px; width: 20px; height: 20px; }
+
+/* CTA Big Button (x:456,y:50,w:315,h:60) -> left:30, top:480 */
+#button-54-668 {
+  left: 30px; top: 480px; width: 315px; height: 60px;
+  display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px;
+  background: var(--color-129575);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+#label-I54-668-53-624 {
+  font-family: var(--typo-58-family);
+  font-size: var(--typo-58-size);
+  font-weight: var(--typo-58-weight);
+  line-height: var(--typo-58-line-height);
+  color: var(--typo-58-color);
+}
+#icon-I54-668-53-625 {
+  width: 20px; height: 20px;
+}
+
+/* Home Indicator (x:426,y:348,w:375,h:34) -> left:0, top:778 */
+#comp-42-614 { left: 0px; top: 778px; width: 375px; height: 34px; }
+#rect-I42-614-42-603 {
+  position: absolute; left: 120px; top: 21px; width: 135px; height: 5px;
+  background: var(--color-121212); border-radius: 100px;
+}
+
+/* Bottom text - Sign up (x:525,y:266,w:177,h:17) -> left:99, top:696 */
+#text-13-67 {
+  left: 99px; top: 696px; width: 177px; height: 17px;
+  position: absolute; margin: 0;
+  font-family: var(--typo-63-family);
+  font-size: var(--typo-63-size);
+  font-weight: var(--typo-63-weight);
+  line-height: var(--typo-63-line-height);
+  color: var(--typo-63-color);
+  text-align: left;
+}
+
+/* Accessibility focus */
+a:focus, button:focus { outline: 2px solid var(--color-129575); outline-offset: 2px; }
